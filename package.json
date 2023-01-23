@@ -1,6 +1,6 @@
 {
   "name": "micro-frontend",
-  "description": "Microfrontend Example",
+  "description": "Micro frontend Example",
   "workspaces": {
     "packages": [
       "app1",
