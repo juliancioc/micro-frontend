@@ -25,7 +25,6 @@ module.exports = {
     ],
   },
   plugins: [
-    // To learn more about the usage of this plugin, please visit https://webpack.js.org/plugins/module-federation-plugin/
     new ModuleFederationPlugin({
       name: "app2",
       filename: "remoteEntry.js",
