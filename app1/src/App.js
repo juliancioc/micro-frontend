@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
+import HelloVueApp from "./components/HelloVueApp"
 
 const RemoteApp = React.lazy(() => import("app2/App"))
-const RemoteApp3 = React.lazy(() => import("app3/App"))
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
           padding: "10px",
           textAlign: "center",
           backgroundColor: "green",
-          color: "white"
+          color: "white",
         }}
       >
         <h1>Navbar</h1>
@@ -21,7 +21,7 @@ const App = () => {
         <RemoteApp />
       </Suspense>
       <Suspense fallback={"loading..."}>
-        <RemoteApp3 />
+        <HelloVueApp />
       </Suspense>
     </div>
   )
