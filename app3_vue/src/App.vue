@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h1>App Vue</h1>
+    {{ message }}
   </div>
 </template>
 
 <script>
 export default {
-  data() {},
+  data() {
+    return { message: "Hello Vue!" };
+  },
 };
 </script>

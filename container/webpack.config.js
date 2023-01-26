@@ -27,10 +27,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "app1",
+      name: "container",
       remotes: {
-        app2: "app2@[app2Url]/remoteEntry.js",
-        helloVue: "helloVue@[app3Url]/remoteEntry.js"
+        app2_react: "app2@[app2Url]/remoteEntry.js",
+        app3_vue: "helloVue@[app3Url]/remoteEntry.js"
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),

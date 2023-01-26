@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
 import HelloVueApp from "./components/HelloVueApp"
 
-const RemoteApp = React.lazy(() => import("app2/App"))
+const RemoteApp = React.lazy(() => import("app2_react/App"))
 
 const App = () => {
   return (
