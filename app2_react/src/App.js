@@ -11,7 +11,7 @@ const App = () => {
         color: "white",
       }}
     >
-      <h1>Products</h1>
+      <h1>React App</h1>
     </div>
   )
 }

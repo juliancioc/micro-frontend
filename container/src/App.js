@@ -15,7 +15,7 @@ const App = () => {
           color: "white",
         }}
       >
-        <h1>Navbar</h1>
+        <h1>Container React App</h1>
       </div>
       <Suspense fallback={"loading..."}>
         <RemoteApp />

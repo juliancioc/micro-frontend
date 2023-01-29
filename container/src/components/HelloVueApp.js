@@ -8,5 +8,16 @@ export default () => {
     mount(ref.current)
   }, [])
 
-  return <div ref={ref} />
+  return (
+    <div
+      style={{
+        margin: "10px",
+        padding: "10px",
+        textAlign: "center",
+        backgroundColor: "orange",
+        color: "white",
+      }}
+      ref={ref}
+    />
+  )
 }
