@@ -9,7 +9,18 @@
 <script>
 export default {
   data() {
-    return { message: "Vue App" };
+    return { message: "Microfrontend - Vue App" };
   },
 };
 </script>
+
+<style scoped>
+div {
+  background-color: orange;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px
+}
+</style>

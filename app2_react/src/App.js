@@ -1,19 +1,20 @@
-import React from "react"
+import React from "react";
 
 const App = () => {
   return (
     <div
       style={{
-        margin: "10px",
-        padding: "10px",
+        margin: "2rem",
+        padding: "2rem",
         textAlign: "center",
         backgroundColor: "blue",
         color: "white",
+        borderRadius: "8px"
       }}
     >
-      <h1>React App</h1>
+      <h1>Microfrontend - React App</h1>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

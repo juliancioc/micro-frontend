@@ -1,8 +1,8 @@
-const { merge } = require("webpack-merge")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin")
-const packageJson = require("../package.json")
-const { VueLoaderPlugin } = require("vue-loader")
+const { merge } = require("webpack-merge");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const packageJson = require("../package.json");
+const { VueLoaderPlugin } = require("vue-loader");
 
 const devConfig = {
   mode: "development",
@@ -14,6 +14,10 @@ const devConfig = {
       {
         test: /\.vue$/,
         use: "vue-loader",
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.m?js$/,
@@ -29,10 +33,10 @@ const devConfig = {
     ],
   },
   output: {
-    publicPath: "http://localhost:8082/",
+    publicPath: "http://localhost:3001/",
   },
   devServer: {
-    port: 8082,
+    port: 3001,
     historyApiFallback: {
       index: "/index.html",
     },
@@ -51,6 +55,6 @@ const devConfig = {
     }),
     new VueLoaderPlugin(),
   ],
-}
+};
 
-module.exports = merge(devConfig)
+module.exports = merge(devConfig);

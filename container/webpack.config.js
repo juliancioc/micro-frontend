@@ -1,20 +1,24 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { ModuleFederationPlugin } = require("webpack").container
-const ExternalTemplateRemotesPlugin = require("external-remotes-plugin")
-const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
+const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
+const path = require("path");
 
 module.exports = {
   entry: "./src/index",
   mode: "development",
   devServer: {
     static: path.join(__dirname, "dist"),
-    port: 3001,
+    port: 3000,
   },
   output: {
     publicPath: "auto",
   },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -30,7 +34,7 @@ module.exports = {
       name: "container",
       remotes: {
         app2_react: "app2@[app2Url]/remoteEntry.js",
-        app3_vue: "helloVue@[app3Url]/remoteEntry.js"
+        app3_vue: "helloVue@[app3Url]/remoteEntry.js",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
@@ -39,4 +43,4 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
-}
+};

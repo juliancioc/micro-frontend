@@ -2,6 +2,7 @@
   "name": "micro-frontend",
   "author": "Juliancio Carvalho",
   "description": "Micro frontend Example",
+  "private": true,
   "workspaces": {
     "packages": [
       "container",
@@ -10,10 +11,14 @@
     ]
   },
   "scripts": {
-    "start": "lerna run --parallel start",
+    "dev": "lerna run --parallel start",
     "build": "lerna run build"
   },
   "devDependencies": {
     "lerna": "^6.4.1"
+  },
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "styled-loader": "^0.0.0"
   }
 }

@@ -1,11 +1,13 @@
 {
-  "name": "helloVue",
+  "name": "app3-vue",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.prod.js"
   },
   "dependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
